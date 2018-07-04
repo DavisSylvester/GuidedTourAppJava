@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_beaches"
+            android:icon="@drawable/ic_umbrella"
+            android:title="Beaches" />
+        <item
+            android:id="@+id/nav_restaurant"
+            android:icon="@drawable/ic_utensils"
+            android:title="Restaurants" />
+        <item
+            android:id="@+id/nav_Attractions"
+            android:icon="@drawable/ic_bowling_pins"
+            android:title="Attractions" />
+        <item
+            android:id="@+id/nav_museums"
+            android:icon="@drawable/ic_binoculars"
+            android:title="Museums" />
+    </group>
+
+
+</menu>
