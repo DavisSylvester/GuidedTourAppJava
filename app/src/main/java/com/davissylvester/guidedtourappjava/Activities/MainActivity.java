@@ -3,6 +3,8 @@ package com.davissylvester.guidedtourappjava.Activities;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,10 +20,16 @@ import com.davissylvester.guidedtourappjava.R;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    FragmentManager gls;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        gls = getSupportFragmentManager();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -79,7 +87,7 @@ public class MainActivity extends AppCompatActivity
 
         }
         else if (id == R.id.nav_Attractions) {
-
+            //startFragment(gls.findFragmentById);
         }
         else if (id == R.id.nav_museums) {
 
@@ -91,5 +99,12 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private <T extends Fragment>  void startFragment(T frag) {
+
+        gls.beginTransaction()
+                .replace(R.id.clMainContent, frag)
+                .commit();
     }
 }
