@@ -15,6 +15,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.davissylvester.guidedtourappjava.Fragments.AlamoFragment;
+import com.davissylvester.guidedtourappjava.Fragments.NaturalFragment;
+import com.davissylvester.guidedtourappjava.Fragments.RipleyFragment;
+import com.davissylvester.guidedtourappjava.Fragments.RiverWalkFragment;
+import com.davissylvester.guidedtourappjava.Fragments.SanAntonioFragment;
 import com.davissylvester.guidedtourappjava.R;
 
 public class MainActivity extends AppCompatActivity
@@ -41,6 +46,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        startFragment(new SanAntonioFragment());
     }
 
     @Override
@@ -83,17 +90,22 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_beaches) {
             // Handle the camera action
-            Snackbar.make(findViewById(R.id.nav_view), R.string.beaches_text, Snackbar.LENGTH_LONG).show();
+            // Snackbar.make(findViewById(R.id.nav_view), R.string.beaches_text, Snackbar.LENGTH_LONG).show();
 
+            startFragment(new NaturalFragment());
         }
         else if (id == R.id.nav_Attractions) {
-            //startFragment(gls.findFragmentById);
+            AlamoFragment frag = new AlamoFragment();
+            startFragment(frag);
         }
         else if (id == R.id.nav_museums) {
+            RipleyFragment frag = new RipleyFragment();
+            startFragment(frag);
+    }
 
-        }
         else if (id == R.id.nav_restaurant) {
-
+            RiverWalkFragment frag = new RiverWalkFragment();
+            startFragment(frag);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

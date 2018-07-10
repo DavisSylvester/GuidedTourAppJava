@@ -2,25 +2,22 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.AlamoFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".Fragments.RipleyFragment">
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="259dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/alamo"
+        android:src="@mipmap/ripleys_museum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,11 +25,11 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans_semibold"
-        android:text="Alamo"
-        android:textSize="24sp"
+        android:text="Ripley's Believe It or Not"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -40,10 +37,9 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         android:fontFamily="@font/open_sans"
-        android:text="Free"
+        android:text="$21.99"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,12 +48,12 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/open_sans"
-        android:text="300 Alamo Plaza, San Antonio, TX 78205"
+        android:text="301 Alamo Plaza, San Antonio, TX 78205"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -66,12 +62,13 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans"
         android:text="The Alamo Mission in San Antonio is commonly called The Alamo and was originally known as Misión San Antonio de Valero."
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 </android.support.constraint.ConstraintLayout>

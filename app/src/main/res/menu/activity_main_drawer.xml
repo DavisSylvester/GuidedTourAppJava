@@ -8,19 +8,19 @@
         <item
             android:id="@+id/nav_beaches"
             android:icon="@drawable/ic_umbrella"
-            android:title="Beaches" />
+            android:title="Natural Wildlife Park" />
         <item
             android:id="@+id/nav_restaurant"
             android:icon="@drawable/ic_utensils"
-            android:title="Restaurants" />
+            android:title="Riverwalk" />
         <item
             android:id="@+id/nav_Attractions"
             android:icon="@drawable/ic_bowling_pins"
-            android:title="Attractions" />
+            android:title="Alamo" />
         <item
             android:id="@+id/nav_museums"
             android:icon="@drawable/ic_binoculars"
-            android:title="Museums" />
+            android:title="Ripley Museum" />
     </group>
 
 
