@@ -15,17 +15,25 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.davissylvester.guidedtourappjava.DomainClasses.AttractionData;
+import com.davissylvester.guidedtourappjava.DomainClasses.DataService;
 import com.davissylvester.guidedtourappjava.Fragments.AlamoFragment;
+import com.davissylvester.guidedtourappjava.Fragments.AttractionList;
 import com.davissylvester.guidedtourappjava.Fragments.NaturalFragment;
 import com.davissylvester.guidedtourappjava.Fragments.RipleyFragment;
 import com.davissylvester.guidedtourappjava.Fragments.RiverWalkFragment;
 import com.davissylvester.guidedtourappjava.Fragments.SanAntonioFragment;
 import com.davissylvester.guidedtourappjava.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     FragmentManager gls;
+    ArrayList<AttractionData> data;
+
 
 
     @Override
@@ -35,16 +43,19 @@ public class MainActivity extends AppCompatActivity
 
         gls = getSupportFragmentManager();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        data = DataService.getInstance().getData();
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         startFragment(new SanAntonioFragment());
@@ -52,7 +63,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -89,9 +100,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_beaches) {
-            // Handle the camera action
-            // Snackbar.make(findViewById(R.id.nav_view), R.string.beaches_text, Snackbar.LENGTH_LONG).show();
 
+            // Arrays.stream(data.toArray()).filter(x -> x. == "alamo");x
             startFragment(new NaturalFragment());
         }
         else if (id == R.id.nav_Attractions) {
@@ -108,15 +118,28 @@ public class MainActivity extends AppCompatActivity
             startFragment(frag);
         }
 
+        else if (id == R.id.nav_attractions_list) {
+            AttractionList frag = new AttractionList();
+            startFragment(frag);
+        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    private <T extends Fragment>  void startFragment(T frag) {
+    public void showAttractions(View view) {
+
+
+        startFragment(new AttractionList());
+    }
+
+    public <T extends Fragment>  void startFragment(T frag) {
 
         gls.beginTransaction()
                 .replace(R.id.clMainContent, frag)
                 .commit();
     }
+
+
 }

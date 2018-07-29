@@ -39,12 +39,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivSanAntonio"
         android:layout_width="286dp"
         android:layout_height="187dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:onClick="showAttractions"
         android:scaleType="fitXY"
         android:src="@mipmap/original"
         app:layout_constraintEnd_toEndOf="parent"

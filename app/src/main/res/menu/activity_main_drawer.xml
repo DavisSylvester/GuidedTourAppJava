@@ -6,6 +6,10 @@
     <group android:checkableBehavior="single">
 
         <item
+            android:id="@+id/nav_attractions_list"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Attraction List" />
+        <item
             android:id="@+id/nav_beaches"
             android:icon="@drawable/ic_umbrella"
             android:title="Natural Wildlife Park" />
