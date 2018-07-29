@@ -138,7 +138,13 @@ public class MainActivity extends AppCompatActivity
 
         gls.beginTransaction()
                 .replace(R.id.clMainContent, frag)
+                .addToBackStack("myFrags")
                 .commit();
+    }
+
+    public void backNavigate(View view) {
+
+        startFragment(new AttractionList());
     }
 
 
