@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.content.Context;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.davissylvester.guidedtourappjava.Activities.MainActivity;
@@ -66,19 +67,29 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView attrName;
+        ImageView attrPicture;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             attrName = itemView.findViewById(R.id.txtAttractionName);
-
+            attrPicture = itemView.findViewById(R.id.ivItemPic);
 
         }
 
         public void bindItem(final AttractionData att, final Context context) {
 
             attrName.setText("" + att.Name);
+
+            int resourceId = context.getResources().getIdentifier(att.Picture,
+                    "mipmap",
+                    context.getPackageName());
+
+            Log.d("HELP", att.Picture);
+            Log.d("HELP", Integer.toString(resourceId));
+
+            attrPicture.setImageResource(resourceId);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
