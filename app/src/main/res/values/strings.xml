@@ -8,6 +8,15 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="beaches_text">You clicked Beaches</string>
+    <string name="show_attractions">See Attractions</string>
+    <string name="san_antonio">San Antonio</string>
+    <string name="alamo">Alamo</string>
+    <string name="riverwalk">Riverwalk</string>
+    <string name="ripleys">Ripley\'s Believe it or not</string>
+    <string name="natural_wildlife">Natural Wildlife Park</string>
+    <string name="tour">Tour</string>
+    <string name="back_button">Back</string>
+    <string name="free_text">Free</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
