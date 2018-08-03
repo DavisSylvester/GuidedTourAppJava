@@ -17,6 +17,23 @@
     <string name="tour">Tour</string>
     <string name="back_button">Back</string>
     <string name="free_text">Free</string>
+    <string name="wildlife_address">26515 Natural Bridge Caverns Rd, San Antonio, TX 78266</string>
+    <string name="wildlife_desc">Natural Bridge Wildlife Ranch is a 400-acre safari park on the
+        northern outskirts of San Antonio, near New Braunfels, Texas</string>
+    <string name="wildlid_price">$22.00</string>
+    <string name="alamo_address">300 Alamo Plaza, San Antonio, TX 78205</string>
+    <string name="alamo_desc">The Alamo Mission in San Antonio is commonly called The Alamo and was
+        originally known as Misión San Antonio de Valero</string>
+    <string name="alamo_price">FREE</string>
+    <string name="riplpey_address">301 Alamo Plaza, San Antonio, TX 78205</string>
+    <string name="ripley_desc">Museum with kitschy oddities on display, including shrunken human
+        heads and rare animal skeletons.</string>
+    <string name="ripley_price">$21.99</string>
+    <string name="riverwalk_address">849 E. Commerce Street, San Antonio, TX 78205</string>
+    <string name="riverwalk_desc">The San Antonio River Walk is a city park and network of walkways
+        along the banks of the San Antonio River, one story beneath the streets of San Antonio,
+        Texas</string>
+    <string name="riverwalk_price">FREE</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

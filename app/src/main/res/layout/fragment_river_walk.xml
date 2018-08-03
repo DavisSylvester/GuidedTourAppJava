@@ -52,7 +52,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/open_sans"
-        android:text="100 Villita St., San Antonio, TX 78205"
+        android:text="@string/riplpey_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -65,7 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans"
-        android:text="The River Walk is a successful special-case pedestrian street, one level down from the automobile street."
+        android:text="@string/riverwalk_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
