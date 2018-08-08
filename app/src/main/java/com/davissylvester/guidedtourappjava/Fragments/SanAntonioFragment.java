@@ -31,6 +31,11 @@ public class SanAntonioFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_san_antonio, container, false);
     }
 
+    public void showAttractions(View view) {
+
+    Log.d("HELP", "showAttractions");
+       //  startFragment(new AttractionList());
+    }
 
 
 

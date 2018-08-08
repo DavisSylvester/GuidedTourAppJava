@@ -1,5 +1,6 @@
 package com.davissylvester.guidedtourappjava.Activities;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity
 
     FragmentManager gls;
     ArrayList<AttractionData> data;
-
+    Context context;
 
 
     @Override
@@ -41,9 +42,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        context = getApplicationContext();
+
         gls = getSupportFragmentManager();
 
-        data = DataService.getInstance().getData();
+        data = new DataService(context).getData();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 

@@ -1,14 +1,24 @@
 package com.davissylvester.guidedtourappjava.DomainClasses;
 
+import android.content.Context;
+
+import com.davissylvester.guidedtourappjava.R;
+
 import java.util.ArrayList;
 import java.util.jar.Attributes;
 
 
 public class DataService {
-    private static final DataService ourInstance = new DataService();
 
-    public static DataService getInstance() {
-        return ourInstance;
+    private Context context;
+
+    public DataService(Context ctx) {
+        context = ctx;
+
+        this.Data = new ArrayList<>();
+
+        loadData();
+
     }
 
     public ArrayList<AttractionData> getData() {
@@ -17,40 +27,34 @@ public class DataService {
 
     ArrayList<AttractionData> Data;
 
-    private DataService() {
-
-        this.Data = new ArrayList<>();
-
-        loadData();
-
-
-    }
-
     private void loadData() {
 
+
+
         Data.add(new AttractionData(ApplicationConstants.WILDLIFE_RANCH,
-                "26515 Natural Bridge Caverns Rd, San Antonio, TX 78266",
-                "Natural Bridge Wildlife Ranch is a 400-acre safari park on the northern outskirts of San Antonio, near New Braunfels, Texas",
-                "$22.00",
+                context.getString(R.string.wildlife_address),
+                context.getString(R.string.wildlife_desc),
+                context.getString(R.string.wildlid_price),
                 "witte_museum"));
 
         Data.add(new AttractionData(ApplicationConstants.RIVERWALK,
-                "849 E. Commerce Street, San Antonio, TX 78205",
-                "The San Antonio River Walk is a city park and network of walkways along the banks of the San Antonio River, " +
-                      "one story beneath the streets of San Antonio, Texas",
-                "FREE",
+                context.getString(R.string.riverwalk_address),
+                context.getString(R.string.riverwalk_desc),
+                context.getString(R.string.riverwalk_price),
                 "riverwalk"));
 
         Data.add(new AttractionData(ApplicationConstants.ALAMO,
-                "300 Alamo Plaza, San Antonio, TX 78205",
-                "The Alamo Mission in San Antonio is commonly called The Alamo and was originally known as Misión San Antonio de Valero",
-                "FREE",
+                context.getString(R.string.alamo_address),
+                context.getString(R.string.alamo_desc),
+                context.getString(R.string.alamo_price),
                 "alamo"));
 
         Data.add(new AttractionData(ApplicationConstants.RIPLEY,
-                "301 Alamo Plaza, San Antonio, TX 78205",
-                "Museum with kitschy oddities on display, including shrunken human heads & rare animal skeletons.",
-                "$21.99",
+                context.getString(R.string.riplpey_address),
+                context.getString(R.string.ripley_desc),
+                context.getString(R.string.ripley_price),
                 "ripleys_museum"));
+
+
     }
 }

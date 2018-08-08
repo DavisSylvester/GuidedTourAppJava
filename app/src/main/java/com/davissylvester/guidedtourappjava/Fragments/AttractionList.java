@@ -30,7 +30,7 @@ public class AttractionList extends Fragment {
 
     public AttractionList() {
         // Required empty public constructor
-        data = getData();
+        // data = getData();
 
 
 
@@ -38,7 +38,9 @@ public class AttractionList extends Fragment {
 
     private ArrayList<AttractionData> getData() {
 
-        return DataService.getInstance().getData();
+
+
+        return new DataService(this.getContext()).getData();
     }
 
 
@@ -60,7 +62,7 @@ public class AttractionList extends Fragment {
     private void setDefaults(View view) {
 
 
-        mAdapter = new AttractionAdapter(getContext(), data);
+        mAdapter = new AttractionAdapter(getContext(), getData());
 
         mlayoutManager = new LinearLayoutManager(getContext());
 
